@@ -1,0 +1,5 @@
+D:\projects\LSP\Trunk\Src\LSP\LSP.Models\bin\Debug\LSP.Models.dll
+D:\projects\LSP\Trunk\Src\LSP\LSP.Models\bin\Debug\LSP.Models.pdb
+D:\projects\LSP\Trunk\Src\LSP\LSP.Models\obj\Debug\LSP.Models.dll
+D:\projects\LSP\Trunk\Src\LSP\LSP.Models\obj\Debug\LSP.Models.pdb
+D:\projects\LSP\Trunk\Src\LSP\LSP.Models\obj\Debug\LSP.Models.csprojResolveAssemblyReference.cache
