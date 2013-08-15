@@ -4,12 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace AopInDotNet.Auction
+namespace AopInDotNet.Dto
 {
-    public class Member
+    public class MemberDto
     {
-        public Version Version { get; set; }
-
         public string LoginName { get; set; }
         public string ReputationPoints { get; set; }
     }
