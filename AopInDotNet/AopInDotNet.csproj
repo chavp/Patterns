@@ -84,12 +84,18 @@
     <Compile Include="CastleWindsor\SimpleInjectTest.cs" />
     <Compile Include="Dto\MemberDto.cs" />
     <Compile Include="LoggerInstaller.cs" />
+    <Compile Include="MovieStore\MovieStoreInstaller.cs" />
+    <Compile Include="MovieStore\IMovieFinder.cs" />
+    <Compile Include="MovieStore\Movie.cs" />
+    <Compile Include="MovieStore\MovieLister.cs" />
+    <Compile Include="MovieStore\SimpleMovieFinder.cs" />
     <Compile Include="UnitTest1.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="log4net.config">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
     </None>
     <None Include="packages.config" />
   </ItemGroup>

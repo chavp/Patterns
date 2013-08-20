@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using AutoMapper;
 
@@ -11,6 +12,7 @@ using Castle.MicroKernel.Registration;
 using Castle.Facilities.TypedFactory;
 using Castle.Windsor;
 using Castle.Core;
+using AopInDotNet.MovieStore;
 
 namespace AopInDotNet
 {
@@ -49,6 +51,22 @@ namespace AopInDotNet
                     var myClass = container.Resolve<IMyClass>();
                     myClass.MyMethod();
                 }
+            }
+        }
+
+
+        [TestMethod]
+        public void TestCodeBasedCastleWindsorDI()
+        {
+            using (var container = new WindsorContainer())
+            {
+                container.Install(new MovieStoreInstaller());
+
+                var aMovieLister = container.Resolve<MovieLister>();
+
+                var movie = aMovieLister.MoviesDirectedBy("Director10").Single();
+
+                Console.WriteLine("Title:{0}, Director:{1}", movie.Title, movie.Director);
             }
         }
 
