@@ -42,8 +42,17 @@
     <Reference Include="Castle.Core">
       <HintPath>..\packages\Castle.Core.3.2.0\lib\net45\Castle.Core.dll</HintPath>
     </Reference>
+    <Reference Include="Castle.Facilities.Logging">
+      <HintPath>..\packages\Castle.LoggingFacility.3.2.0\lib\net45\Castle.Facilities.Logging.dll</HintPath>
+    </Reference>
+    <Reference Include="Castle.Services.Logging.Log4netIntegration">
+      <HintPath>..\packages\Castle.Core-log4net.3.2.0\lib\net45\Castle.Services.Logging.Log4netIntegration.dll</HintPath>
+    </Reference>
     <Reference Include="Castle.Windsor">
       <HintPath>..\packages\Castle.Windsor.3.2.1\lib\net45\Castle.Windsor.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net">
+      <HintPath>..\packages\log4net.1.2.10\lib\2.0\log4net.dll</HintPath>
     </Reference>
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
@@ -70,11 +79,27 @@
     <Compile Include="Auction\Item.cs" />
     <Compile Include="Auction\Member.cs" />
     <Compile Include="Auction\Version.cs" />
+    <Compile Include="CastleWindsor\IKing.cs" />
+    <Compile Include="CastleWindsor\King.cs" />
+    <Compile Include="CastleWindsor\SimpleInjectTest.cs" />
     <Compile Include="Dto\MemberDto.cs" />
+<<<<<<< HEAD
+=======
+    <Compile Include="LoggerInstaller.cs" />
+    <Compile Include="MovieStore\MovieStoreInstaller.cs" />
+    <Compile Include="MovieStore\IMovieFinder.cs" />
+    <Compile Include="MovieStore\Movie.cs" />
+    <Compile Include="MovieStore\MovieLister.cs" />
+    <Compile Include="MovieStore\SimpleMovieFinder.cs" />
+>>>>>>> b7c814a5fc8bbec6bae73c3d245814843e506439
     <Compile Include="UnitTest1.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="log4net.config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
+    </None>
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
