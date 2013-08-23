@@ -71,7 +71,6 @@
     <Compile Include="Auction\Member.cs" />
     <Compile Include="Auction\Version.cs" />
     <Compile Include="Dto\MemberDto.cs" />
-    <Compile Include="RequiresPostSharp.cs" />
     <Compile Include="UnitTest1.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

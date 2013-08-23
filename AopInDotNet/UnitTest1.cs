@@ -11,6 +11,7 @@ using Castle.MicroKernel.Registration;
 using Castle.Facilities.TypedFactory;
 using Castle.Windsor;
 using Castle.Core;
+using Castle.Core.Logging;
 
 namespace AopInDotNet
 {
@@ -52,6 +53,19 @@ namespace AopInDotNet
             }
         }
 
+        [TestMethod]
+        public void MyLazy()
+        {
+            
+            using (var container = new WindsorContainer().Install(new Installer()))
+            {
+                
+                var myLazy = container.Resolve<IMyLazy>();
+
+                myLazy.MyClass.MyMethod();
+            }
+        }
+
         public IMyClass GetMyClass()
         {
             var proxyGenerator = new ProxyGenerator();
@@ -89,6 +103,24 @@ namespace AopInDotNet
     {
         bool MyMethod();
         bool MyMethod2();
+    }
+
+    public interface IMyLazy
+    {
+        IMyClass MyClass { get; }
+    }
+
+    public class MyLazy : IMyLazy
+    {
+        private IMyClass _IMyClass;
+
+        public MyLazy(IMyClass iMyClass)
+        {
+            _IMyClass = iMyClass;
+        }
+
+        public IMyClass MyClass { get { return _IMyClass; } }
+        
     }
 
     public class MyInterceptorAspect : IInterceptor
@@ -139,13 +171,20 @@ namespace AopInDotNet
             container.Register(
                 Component
                 .For<MyInterceptorAspect>()
-                .LifeStyle.Singleton,
+                .LifeStyle.PerThread,
 
                 Component
                 .For<IMyClass>()
                 .ImplementedBy<MyClass>()
                 .Interceptors<MyInterceptorAspect>()
-                .LifeStyle.Transient);
+                .LifeStyle.Transient,
+                
+                Component
+                .For<IMyLazy>()
+                .ImplementedBy<MyLazy>()
+                .LifeStyle.Transient
+
+                );
         }
 
         #endregion
