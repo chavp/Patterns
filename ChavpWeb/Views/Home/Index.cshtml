@@ -1,0 +1,23 @@
+﻿@using ChavpWeb.Extensions
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+
+
+@section scripts{
+    <script>
+        function IndexViewModel() {
+            this.userName = ko.observable("Chavp");
+
+            this.hello = function () {
+                alert(this.userName());
+            }
+        }
+
+        ko.applyBindings(new IndexViewModel());
+    </script>
+}
