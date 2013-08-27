@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using ChavpWeb.Models;
 
 namespace ChavpWeb.Controllers
 {
@@ -13,7 +14,10 @@ namespace ChavpWeb.Controllers
 
         public ActionResult Index()
         {
-            return View();
+            return View(new IndexViewModel
+            {
+                UserName = "Chavp"
+            });
         }
 
     }

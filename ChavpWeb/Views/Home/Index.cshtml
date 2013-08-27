@@ -1,20 +1,23 @@
 ﻿@using ChavpWeb.Extensions
+@model ChavpWeb.Models.IndexViewModel
 
 @{
     ViewBag.Title = "Index";
 }
 
-<h2>Index</h2>
-
-
+User Name: @Html.KoTextBoxFor(m => m.UserName, new { }, true)
+@Html.KoTextActionLink("Hello", "hello")
 
 @section scripts{
     <script>
         function IndexViewModel() {
-            this.userName = ko.observable("Chavp");
+            this.UserName = ko.observable("Chavp");
 
             this.hello = function () {
-                alert(this.userName());
+    
+                alert(this.UserName());
+
+                return false;
             }
         }
 
