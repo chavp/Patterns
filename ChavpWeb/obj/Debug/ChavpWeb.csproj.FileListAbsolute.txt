@@ -66,3 +66,4 @@ B:\GithubRepositories\Patterns\ChavpWeb\bin\System.Web.WebPages.Deployment.xml
 B:\GithubRepositories\Patterns\ChavpWeb\bin\System.Web.WebPages.Razor.xml
 B:\GithubRepositories\Patterns\ChavpWeb\obj\Debug\ChavpWeb.dll
 B:\GithubRepositories\Patterns\ChavpWeb\obj\Debug\ChavpWeb.pdb
+D:\projects\Patterns\ChavpWeb\obj\Debug\ChavpWeb.csprojResolveAssemblyReference.cache
