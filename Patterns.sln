@@ -5,6 +5,26 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AopInDotNet", "AopInDotNet\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChavpWeb", "ChavpWeb\ChavpWeb.csproj", "{D987C81E-EFAA-4E00-98ED-21BC7106F699}"
 EndProject
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "QUnit", "QUnit\", "{2C32136F-1B81-4887-8CEA-670E21F31AA5}"
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.0"
+		Debug.AspNetCompiler.VirtualPath = "/QUnit"
+		Debug.AspNetCompiler.PhysicalPath = "QUnit\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\QUnit\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/QUnit"
+		Release.AspNetCompiler.PhysicalPath = "QUnit\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\QUnit\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "5747"
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -19,6 +39,10 @@ Global
 		{D987C81E-EFAA-4E00-98ED-21BC7106F699}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D987C81E-EFAA-4E00-98ED-21BC7106F699}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D987C81E-EFAA-4E00-98ED-21BC7106F699}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2C32136F-1B81-4887-8CEA-670E21F31AA5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2C32136F-1B81-4887-8CEA-670E21F31AA5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2C32136F-1B81-4887-8CEA-670E21F31AA5}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{2C32136F-1B81-4887-8CEA-670E21F31AA5}.Release|Any CPU.Build.0 = Debug|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
